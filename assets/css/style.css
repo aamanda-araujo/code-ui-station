@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Barrio&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+QLD+Hand:wght@400..700&display=swap');
+
+:root{
+  --text-color:#fff1de;
+  --text-font-1: "Arima", system-ui;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  margin: 0;
+  background-image: url(/assets/img/img-fundo-tela-grande.jpeg);
+  background-size: cover;     
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: aliceblue;
+  animation: panFundo 20s ease-in-out infinite;
+}
+
+@keyframes panFundo {
+  0% {
+    background-position: center center;
+  }
+  25% {
+    background-position: right top;
+  }
+  50% {
+    background-position: center center;
+  }
+  75% {
+    background-position: left bottom;
+  }
+  100% {
+    background-position: center center;
+  }
+}
+
+main{
+  flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+li{
+  list-style-type: none;
+}
+
+.hero-icon{
+  width: 5rem;
+}
+
+.hero-title{
+  margin: 0;
+  font-family: "Kumar One Outline", system-ui;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 9px;
+  line-height: 43px;
+  animation: slideDown 2s ease-in-out 0.8;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px); /* Começa 40px acima */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.text-accent{
+  color: red;
+}
+
+.hero-description{
+  font-family: "Arima", system-ui;
+  /* font-weight:bold ; */
+  font-style: normal;
+  letter-spacing: 5px;
+  color: var(--text-color);
+  animation: slideCenter 5s ease-in-out 2s;
+}
+
+.hero-description p{
+  text-align: center;
+}
+
+.hero-description-main{
+  text-align: justify;
+  display: block;
+  margin-bottom: 13px;
+}
+
+
+@keyframes slideCenter {
+  from {
+    opacity: 0;
+    /* visibility: hidden; */
+    transform: translateX(180px); /* Começa 40px acima */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.phrase-bold{
+  font-weight: bold;
+}
+
+.btn-primary{
+  font-family: "Barrio", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 25px;
+  padding: 16px;
+  letter-spacing: 8px;
+  border-radius: 50px;
+  background-color: #1e0c51;
+  color: azure;
+  box-shadow: 0 0 16px 10px ;
+  border: none;
+  margin: 40px 0 60px;
+ }
+
+.btn-primary:hover{
+  cursor: pointer;
+  animation: slide8Top 8s ease-in-out alternate;
+
+}
+
+@keyframes slide8Top {
+  from {
+    opacity: 0;
+  }
+  to {
+    background-color: black;
+    color: aqua;
+    opacity: 1;
+    box-shadow: 45px 45px 45px 45px 45px;
+  }
+}
+
+@keyframes panFundoAside {
+  0% {
+    /* Começa com a imagem posicionada no centro (padrão) */
+    background-position: center center;
+  }
+  25% {
+    /* Move levemente para cima e para a direita */
+    background-position: right top;
+  }
+  50% {
+    /* Move para o centro novamente */
+    background-position: center center;
+  }
+  75% {
+    /* Move levemente para baixo e para a esquerda */
+    background-position: left bottom;
+  }
+  100% {
+    /* Volta para o ponto de partida */
+    background-position: center center;
+  }
+}
+
+.site-footer{
+  width: 100%;
+  background-image: linear-gradient(to right, #352960a2, #254b7083, #09099d69);
+  padding: 20px 40px;
+}
+
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.legal-links{
+  line-height: 25px;
+  padding-left: 0;
+  margin: 0;
+}
+
+.legal-links li a{
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: aliceblue;
+}
+
+.feedback-section{
+  text-align: center;
+  line-height: 14px;
+}
+
+.social-title{
+  letter-spacing: 2px;
+}
+
+.social-links{
+  display: flex;
+  gap: 40px;
+  padding-right: 0;
+  margin: 0;
+}
+
+.fa-brands{
+  font-size: 30px;
+  padding-left: 8px;
+}
+
+.fa-github{
+  color: black;
+}
+
+.fa-github:hover{
+  border-radius: 50%;
+  border: solid 5px #6df0f4;
+  transition: all 2s ease-in-out 0.8;
+}
+
+.fa-linkedin{
+  color: #422fec;
+}
+
+.btn-secondary{
+  text-decoration: none;
+  letter-spacing: 2px;
+  color: #6df0f4;
+  font-weight: bold;
+}
+
+.fa-lock{
+  color: #feaa22;
+}
+
+.footer-credits{
+  text-align: center;
+  letter-spacing: 3px;
+  margin-top: 20px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CODE UI STATION: Um design System moderno, simples de integrar e totalmente personalizável.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/logo.ico" type="image/ico">
+  <title>CODE UI STATION</title>
+</head>
+<body>
+
+  <main class="main-content"> 
+    <section class="hero-section">
+
+      <img src="assets/img/logo.ico" alt="" class="hero-icon" aria-hidden="true">
+
+    <h1 class="hero-title">Code UI<br><span class="text-accent">Station</span></h1>
+  <p class="hero-description">
+    <strong class="hero-description-main">Sua criatividade não tem barreiras, sua UI componentes também não deveria ter.</strong><br>
+    Um Design System desenhado para quem quer agilidade sem abrir mão da identidade. Aqui, você encontra componentes modernos, simples de integrar e totalmente personalizáveis para refletir o seu estilo único.
+  </p>
+
+  <button id="btn-open-menu" class="btn-primary" aria-haspopup="dialog" aria-expanded="false">Venha experimentar
+    </button>
+   </section>
+  </main>
+
+  <dialog id="components-menu" class="menu-overlay" aria-labelledby="menu-title">
+    <div class="menu-header">
+      <h2 id="menu-title" class="menu-title">Componentes Disponíveis</h2>
+      <button id="btn-close-menu" class="btn-close" aria-label="Fechar menu">&times;</button>
+    </div>
+
+    <div class="menu-body">
+      <ul class="componentes-list">
+        <li class="componentes-item">
+          <a href="" class="componentes-link">Borda</a>
+          <p class="componentes-descricao"> Definem os limites, o arredondamento (border-radius) e o estilo do contorno dos componentes da interface.</p>
+        </li>
+        <li class="componentes-item"> 
+          <a href="#" class="componentes-link">Botão</a>
+          <p class="componentes-descricao">Elementos interativos clicáveis utilizados para acionar ações específicas, como enviar formulários ou confirmar escolhas.</p>
+        </li>
+        <li class="componentes-item"> 
+          <a href="#" class="componentes-link">Box</a>
+          <p class="componentes-descrição">Contêineres estruturais básicos usados para agrupar, organizar e criar hierarquia visual entre diferentes elementos na tela.</p>
+        </li>
+        <li class="componentes-item"> 
+          <a href="#" class="componentes-link">Animação</a>
+        <p class="componentes-descricao">Efeitos de movimento e transições que fornecem feedback visual dinâmico e tornam a interação mais fluida.</p>
+      </li>
+      <li class="componentes-item">
+        <a href="" class="componentes-link">Input</a>
+        <p class="componentes-descricao">Campos de entrada de texto ou dados onde o usuário interage digitando informações, essenciais para formulários e pesquisas</p>
+      </li>
+    </ul>
+  </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <nav class="footer-nav" aria-label="Links legais">
+       <ul class="legal-links">
+        <li><a href="#">Termos e direitos</a></li>
+        <li><a href="#">Entre em contato</a></li>
+    </ul>
+  </nav>
+
+  <nav class="footer-social" aria-label="Redes sociais">
+  <p class="social-title">Acompanhe a criadora</p>
+    <ul class="social-links">
+      <li>
+        <a href="" target="_blank" rel="noopener noreferrer">
+         <i class="fa-brands fa-github"></i>
+      </a>
+    </li>
+      <li>
+        <a href="" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<section class="feedback-section">
+  <p class="feedback-text">O que você está achando do Code UI Station?</p>
+  <p class="feedback-text">Responda nossa pesquisa rápida e ajude-nos a construir atualizações ainda melhores.</p>
+
+  <a href="#" class="btn-secondary">Avaliar o Code UI Station</a>
+  <p class="privacy-note">
+    <i class="fa-solid fa-lock" aria-hidden="true"></i> 
+    Seu feedback é 100% anônimo. Não coletamos e-mails ou dados pessoais.
+  </p>
+</section>
+
+<p class="footer-credits">
+  <small>&copy; 2026 &#45; Todos os direitos reservados a <span class="creator-name">Amanda Araujo</span></small>
+   </p>
+</footer>
+
+  <script src="/assets/js/script.js"></script>
+</body>
+</html>
