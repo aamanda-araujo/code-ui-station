@@ -6,6 +6,7 @@
 :root{
   --text-color:#fff1de;
   --text-font-1: "Arima", system-ui;
+  --animation-color: aqua;
 }
 
 *{
@@ -88,7 +89,6 @@ li{
 
 .hero-description{
   font-family: "Arima", system-ui;
-  /* font-weight:bold ; */
   font-style: normal;
   letter-spacing: 5px;
   color: var(--text-color);
@@ -135,24 +135,13 @@ li{
   box-shadow: 0 0 16px 10px ;
   border: none;
   margin: 40px 0 60px;
+  transition: all 2s ease-in-out;
  }
 
 .btn-primary:hover{
   cursor: pointer;
-  animation: slide8Top 8s ease-in-out alternate;
-
-}
-
-@keyframes slide8Top {
-  from {
-    opacity: 0;
-  }
-  to {
-    background-color: black;
-    color: aqua;
-    opacity: 1;
-    box-shadow: 45px 45px 45px 45px 45px;
-  }
+  background-color: black;
+  color: var(--animation-color);
 }
 
 @keyframes panFundoAside {
@@ -220,23 +209,30 @@ li{
   margin: 0;
 }
 
-.fa-brands{
-  font-size: 30px;
-  padding-left: 8px;
+.fa-github, .fa-linkedin{
+  font-size: 35px;
+  border: 3px solid transparent;
+  transition: all 2s ease-in-out; 
 }
 
 .fa-github{
   color: black;
+  border-radius: 50px;
 }
 
 .fa-github:hover{
-  border-radius: 50%;
-  border: solid 5px #6df0f4;
-  transition: all 2s ease-in-out 0.8;
+  border: solid 3px #6df0f4;
+  box-shadow: 0 0 10px #5ce1e6, 0 0 20px #0077b6, inset 0 0 5px #6df2f7f7;
 }
 
 .fa-linkedin{
   color: #422fec;
+  border-radius: 8px;
+}
+
+.fa-linkedin:hover{
+  border: solid 3px #b8c359;
+  box-shadow: 0 0 10px #beb74f, 0 0 20px #b6b600, inset 0 0 11px #f7e96df7;
 }
 
 .btn-secondary{
