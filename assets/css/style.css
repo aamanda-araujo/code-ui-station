@@ -7,6 +7,8 @@
   --text-color:#fff1de;
   --text-font-1: "Arima", system-ui;
   --animation-color: aqua;
+  --visibility-intial: hidden;
+  --visibility-final: visible;
 }
 
 *{
@@ -62,6 +64,11 @@ li{
   width: 5rem;
 }
 
+.hero-icon, .hero-title{
+  visibility: var(--visibility-intial);
+  animation: slideDown 2s ease-in-out 1s forwards;
+}
+
 .hero-title{
   margin: 0;
   font-family: "Kumar One Outline", system-ui;
@@ -69,17 +76,18 @@ li{
   text-transform: uppercase;
   letter-spacing: 9px;
   line-height: 43px;
-  animation: slideDown 2s ease-in-out 0.8;
 }
 
 @keyframes slideDown {
   from {
     opacity: 0;
-    transform: translateY(-40px); /* Começa 40px acima */
+    visibility: var(--visibility-intial);
+    transform: translateY(-40px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
+    visibility: var(--visibility-final);
   }
 }
 
@@ -87,15 +95,7 @@ li{
   color: red;
 }
 
-.hero-description{
-  font-family: "Arima", system-ui;
-  font-style: normal;
-  letter-spacing: 5px;
-  color: var(--text-color);
-  animation: slideCenter 5s ease-in-out 2s;
-}
-
-.hero-description p{
+.hero-section{
   text-align: center;
 }
 
@@ -103,18 +103,42 @@ li{
   text-align: justify;
   display: block;
   margin-bottom: 13px;
+  animation: slideRight 4s ease-in-out 3s forwards;
+  visibility: var(--visibility-intial)
 }
 
-
-@keyframes slideCenter {
+@keyframes slideRight {
   from {
     opacity: 0;
-    /* visibility: hidden; */
-    transform: translateX(180px); /* Começa 40px acima */
+    visibility: var(--visibility-intial);
+    transform: translateX(180px);
   }
   to {
     opacity: 1;
     transform: translateX(0);
+    visibility: var(--visibility-final);
+  }
+}
+
+.hero-description{
+  font-family: "Arima", system-ui;
+  font-style: normal;
+  letter-spacing: 5px;
+  color: var(--text-color);
+  animation: slideLeft 4s ease-in-out 6s forwards;
+  visibility: var(--visibility-intial);
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    visibility: var(--visibility-intial);
+    transform: translateX(-180px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    visibility: var(--visibility-final);
   }
 }
 
@@ -136,7 +160,22 @@ li{
   border: none;
   margin: 40px 0 60px;
   transition: all 2s ease-in-out;
- }
+  visibility: var(--visibility-intial);
+  animation: slideUp 4s ease-in-out 9s forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    visibility: var(--visibility-intial);
+    transform: translateY(180px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: var(--visibility-final);
+  }
+}
 
 .btn-primary:hover{
   cursor: pointer;
@@ -171,6 +210,21 @@ li{
   width: 100%;
   background-image: linear-gradient(to right, #352960a2, #254b7083, #09099d69);
   padding: 20px 40px;
+  visibility: var(--visibility-intial);
+  animation: SlideUp2 4s ease-in-out 12s forwards;
+}
+
+@keyframes SlideUp2 {
+  from{
+    opacity: 0;
+    visibility: var(--visibility-intial);
+    transform: translateY(180px);
+  }
+  to{
+    opacity: 1;
+    visibility: var(--visibility-final);
+    transform: translateY(0);
+  }
 }
 
 .footer-content{
