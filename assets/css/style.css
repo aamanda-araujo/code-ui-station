@@ -72,6 +72,7 @@ a{ text-decoration: none; color: inherit; }
 
 
 .hero-icon{
+  margin-top: 3.5rem;
   width: clamp(4rem, 10vw, 6rem);
   opacity: var(--visibility-intial);
   animation: slideDown 1s ease-out 0.2s forwards;
@@ -80,23 +81,27 @@ a{ text-decoration: none; color: inherit; }
 .hero-title{
   font-family: "Kumar One Outline", system-ui;
   text-transform: uppercase;
-  letter-spacing: clamp(1.5rem, 5vw, 3rem);
-  line-height: 1.2;
+  letter-spacing: clamp(0.2rem, 2vw, 0.8rem);
+  line-height: 1.4;
   opacity: var(--visibility-intial);
-  animation: slideDown 1s ease-out 0.4s forwards;
+  animation: slideDown 2s ease-out 0.4s forwards;
 }
 
 .text-accent{ color: red; }
 
 .hero-description-main{
-  margin: 1.5rem 0;
+  display: block;
+  margin: 1.8rem 0 1rem;
   opacity: var(--visibility-intial);
-  animation: slideRight 1s ease-in-out 0.6s forwards;
+  letter-spacing: var(--letter-spacing-2);
+  animation: slideRight 3s ease-in-out 1.9s forwards;
 }
 
 .hero-description{
+  margin-bottom: 1rem;
   opacity: var(--visibility-intial);
-  animation: slideLeft 4s ease-in-out 6s forwards;
+  text-align: justify;
+  animation: slideLeft 3s ease-in-out 3.8s forwards;
 }
 
 .phrase-bold{ font-weight: bold; }
@@ -104,24 +109,25 @@ a{ text-decoration: none; color: inherit; }
 .btn-primary{
   font-family: var(--text-font);
   font-size: clamp(1.2rem, 3vw, 1.5rem);
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
   letter-spacing: 4px;
   border-radius: 50px;
   background-color: #1e0c51;
   color: azure;
   box-shadow: 0 0 16px 5px rgba(0, 0, 0, 0.3);
   border: none;
-  margin: 2rem 0;
+  margin: 1.8rem 0 3rem;
   cursor: pointer;
   transition: var(--transition);
   opacity: var(--visibility-intial);
-  animation: slideUp 4s ease-in-out 9s forwards;
+  animation: slideUp 3s ease-in-out 5.3s forwards;
 }
 
 .btn-primary:hover, -btn-primary:focus-visible{
   background-color: black;
   color: var(--animation-color);
   transform: scale(1.05);
+  box-shadow: 0 0 10px #03ffea, 0 0 20px #2afffb, inset 0 0 11px #8ffffff7;
 }
 
 .site-footer{
@@ -129,7 +135,7 @@ a{ text-decoration: none; color: inherit; }
   background-image: linear-gradient(to right, #352960a2, #254b7083, #09099d69);
   padding: 2rem 5vw;
   opacity: var(--visibility-intial);
-  animation: SlideUp 1s ease-out 1.2s forwards;
+  animation: slideUp 3s ease-out 9s forwards;
 }
 
 .footer-content{
@@ -161,25 +167,37 @@ a{ text-decoration: none; color: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
+  padding: 0.1rem;
+  margin: 0.5rem;
 }
 
-.fa-github{ color: #fff; border-radius: 50%; }
+.fa-github{ 
+  color: #fff; 
+  border-radius: 50%; 
+}
+
 .fa-github:hover, .fa-github:focus-visible{ 
+  border: solid 2px #58fdfd;
   box-shadow: 0 0 10px #5ce1e6, inset 0 0 5px #6df2f7f7; 
 }
 
-.fa-linkedin{ color: #523eff; border-radius: 8px; }
+.fa-linkedin{ 
+  color: #523eff; 
+  border-radius: 8px; 
+}
+
 .fa-linkedin:hover, .fa-linkedin:focus-visible{
-  border: solid 3px #b8c359;
+  border: solid 3px #fff95a;
   box-shadow: 0 0 10px #beb74f, 0 0 20px #b6b600, inset 0 0 11px #f7e96df7;
 }
 
 .btn-secondary{
+  display: inline-block;
   font-family: var(--text-font);
   color: #6df0f4;
   font-weight: bold;
   transition: var(--transition);
+  margin-bottom: 1rem;
 }
 
 .btn-secondary:hover, .btn-secondary:focus-visible{
@@ -192,22 +210,18 @@ a{ text-decoration: none; color: inherit; }
 
 .fa-lock{ color: #feaa22; }
 
+.feedback-text{
+  margin: 15px 0;
+}
+
 .footer-credits{
   font-family: var(--cursive-font);
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   font-size: 1.25rem;
 }
 
 .creator-name{
   font-family: var(--text-font);
-  transition: var(--transition);
-  display: inline-block;
-}
-
-.creator-name:hover{
-  font-family: var(--cursive-font);
-  letter-spacing: var(--letter-spacing-2);
-  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
